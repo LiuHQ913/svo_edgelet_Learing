@@ -82,7 +82,7 @@ InitResult KltHomographyInit::addSecondFrame(FramePtr frame_cur)
   double sq_sum = std::inner_product(disparities_.begin(), disparities_.end(), disparities_.begin(), 0.0);
   double stdev = std::sqrt(sq_sum / disparities_.size() - mean * mean);
 
-  int method_flag(1);  // H method
+  int method_flag(1);  // H method // todo 根据什么来判断是E 还是 H
   if(stdev > 15)
   {
     method_flag = 2;   // E method

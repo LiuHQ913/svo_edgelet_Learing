@@ -34,6 +34,7 @@ calcFromPlaneParams(const Vector3d& n_c1, const Vector3d& xyz_c1)
   H_c2_from_c1 = T_c2_from_c1.rotationMatrix() + (T_c2_from_c1.translation()*n_c1.transpose())/d;
 }
 
+///@brief 构建H矩阵
 void Homography::
 calcFromMatches()
 {
